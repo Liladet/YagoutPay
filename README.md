@@ -1,6 +1,16 @@
 ## 🛍️ YagoutPay Store
 
 
+🚀 Quick Start
+
+Prerequisites
+
+Node.js 16+
+
+Python 3.8+
+
+Git
+
 A modern, responsive e-commerce platform with seamless YagoutPay payment integration
 
 
@@ -18,10 +28,6 @@ Feature	Description	Status
 
 🎨 Modern UI	Beautiful, user-friendly interface	✅ Implemented
 
-
-🚀 Quick Start
-
-Prerequisites
 
 Installation
 
