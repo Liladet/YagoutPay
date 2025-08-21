@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Failed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f0f0;
+        }
+        .failure {
+            color: #d32f2f;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-x: auto;
+        }
+        .retry-btn {
+            background: #4299e1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+        .error {
+            color: #d32f2f;
+            background: #ffebee;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❌</text></svg>">
+</head>
+<body>
+    <div class="failure">❌ Payment Failed</div>
+    <p>We're sorry, but your payment could not be processed. Please try again.</p>
+    
+    
+    <a href="http://localhost:3000" class="retry-btn">Return to Store</a>
+    <button class="retry-btn" onclick="window.history.back()">Try Again</button>
+    
+    <script>
+        // Auto-redirect to React app after 8 seconds
+        setTimeout(function() {
+            window.location.href = "http://localhost:3000";
+        }, 8000);
+    </script>
+</body>
+</html>

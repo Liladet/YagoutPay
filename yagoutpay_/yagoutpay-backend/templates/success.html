@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f0f9f0;
+        }
+        .success {
+            color: #2d7d2d;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-x: auto;
+        }
+        .back-btn {
+            background: #4299e1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .error {
+            color: #d32f2f;
+            background: #ffebee;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✅</text></svg>">
+</head>
+<body>
+    <div class="success">✅ Payment Successful!</div>
+    <p>Thank you for your purchase. Your payment has been processed successfully.</p>
+    
+    {% if decrypted_response %}
+    <div class="info">
+        <h3>Payment Details:</h3>
+        <pre>{{ decrypted_response }}</pre>
+    </div>
+    {% endif %}
+    
+    {% if data %}
+    <div class="info">
+        <h3>Raw Data:</h3>
+        <pre>{{ data }}</pre>
+    </div>
+    {% endif %}
+    
+    {% if error %}
+    <div class="error">
+        Error: {{ error }}
+    </div>
+    {% endif %}
+    
+    <a href="http://localhost:3000" class="back-btn">Return to Store</a>
+    
+    <script>
+        // Auto-redirect to React app after 5 seconds
+        setTimeout(function() {
+            window.location.href = "http://localhost:3000";
+        }, 5000);
+    </script>
+</body>
+</html>
