@@ -103,7 +103,7 @@ Update src/index.css:
 Update backend/generate_request.py with your URLs:
 
 ```bash
-Merchant_Id = "your_url"
+Merchant_Id = "your_Id"
 YAGOUTPAY_URL = "https://uatcheckout.yagoutpay.com/..."
 SUCCESS_URL = "https://your-ngrok-id.ngrok-free.app/success"
 FAILURE_URL = "https://your-ngrok-id.ngrok-free.app/failure"
